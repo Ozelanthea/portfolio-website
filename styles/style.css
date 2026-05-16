@@ -1,5 +1,48 @@
+:root {
+    /* Backgrounds */
+  --bg-primary: #101a32;
+  --bg-secondary-start: #132445;
+  --bg-secondary-end: #261d35;
+  --bg-card-start: #13213f;
+  --bg-card-end: #201d35;
+
+  /* Text */
+  --primary-text: #ffffff;
+  --secondary-text: #898b98;
+  --card-logo-color: #1c7fd7;
+  --testimonial-name: #772f43;
+  --tools-text: #153c6d;
+  --testimonial-star: #d87525;
+
+  /* Button */
+  --live-demo-button: #339af4;
+  --collaborate-button: #153e69;
+
+  /* Gradient */
+  --gradient-start: #3e83e1;
+  --gradient-end: #d25063;
+  
+  /* Font family */
+  --font-main: "Poppins", sans-serif;
+
+  /* Length */
+  --container-max-width: 1200px;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--primary-text);
 }
