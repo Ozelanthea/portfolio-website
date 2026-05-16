@@ -19,8 +19,11 @@
   --collaborate-button: #153e69;
 
   /* Gradient */
-  --gradient-start: #3e83e1;
-  --gradient-end: #d25063;
+  --gradient-main: linear-gradient(90deg, #3e83e1, #d25063);
+  --gradient-hire: linear-gradient(90deg, #1e3a61, #631722);
+  --gradient-border-bottom: linear-gradient(90deg, #d25063, #3e83e1);
+  --gradient-card-bg: linear-gradient(135deg, #132445, #391f35);
+  --gradient-secondary-bg: linear-gradient(135deg, #132445, #261d35);
   
   /* Font family */
   --font-main: "Poppins", sans-serif;
@@ -45,4 +48,83 @@ body {
     font-family: var(--font-main);
     background-color: var(--bg-primary);
     color: var(--primary-text);
+}
+
+#navbar {
+    background: var(--gradient-secondary-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    border-bottom: 2px solid var(--gradient-border-bottom);
+}
+
+#navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--gradient-border-bottom);
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 26px;
+    background: var(--gradient-main);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--primary-text);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--card-logo-color);
+}
+
+.hire-btn {
+    padding: 8px 30px;
+    border-radius: 30px;
+    border: 1.5px solid transparent;
+    background: 
+    var(--gradient-hire) padding-box,
+    var(--gradient-main) border-box;
+    color: var(--primary-text);
+    text-decoration: none;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.hire-btn:hover {
+    background: 
+    var(--gradient-main) padding-box,
+    var(--gradient-main) border-box; 
+}
+
+.menu-toggle {
+    display: none;
 }
