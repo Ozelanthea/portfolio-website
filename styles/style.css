@@ -8,7 +8,7 @@
 
   /* Text */
   --primary-text: #ffffff;
-  --secondary-text: #898b98;
+  --secondary-text: #c6c6ca;
   --card-logo-color: #1c7fd7;
   --testimonial-name: #772f43;
   --tools-text: #153c6d;
@@ -19,7 +19,7 @@
   --collaborate-button: #153e69;
 
   /* Gradient */
-  --gradient-main: linear-gradient(90deg, #3e83e1, #d25063);
+  --gradient-main: linear-gradient(90deg, #3c85ec, #e42f4a);
   --gradient-hire: linear-gradient(90deg, #1e3a61, #631722);
   --gradient-border-bottom: linear-gradient(90deg, #d25063, #3e83e1);
   --gradient-card-bg: linear-gradient(135deg, #132445, #391f35);
@@ -50,9 +50,14 @@ body {
     color: var(--primary-text);
 }
 
+h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
 #navbar {
     background: var(--gradient-secondary-bg);
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     left: 0;
@@ -127,4 +132,125 @@ body {
 
 .menu-toggle {
     display: none;
+}
+
+.name {
+    background: var(--gradient-main);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero {
+    padding: 60px;
+}
+
+.hero-content p {
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 10px 24px;
+    background: var(--gradient-main);
+    color: var(--primary-text);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.btn-outline {
+    padding: 8px 24px;
+    color: var(--card-logo-color);
+    text-decoration: none;
+    font-weight: 500;
+    border: 1.5px solid var(--card-logo-color);
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: rgba(28, 127, 215, 0.1);
+}
+
+.btn-outline .arrow {
+    font-size: 0.85em;
+    display: inline-block;
+    transform: scale(0.9);
+}
+
+.hero-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--gradient-main);
+    filter: blur(60px);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.profile-img-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.profile-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.orbit {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.orbit .tech-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    margin: -22px;
+    font-size: 20px;
+    color: var(--card-logo-color);
+    background-color: #1e3a61;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(calc(var(--i) * 60deg)) translateY(-185px) rotate(calc(var(--i) * -60deg));
 }
