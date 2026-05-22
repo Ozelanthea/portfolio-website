@@ -309,3 +309,51 @@ h2 {
 .download-icon {
     margin-left: 8px;
 }
+
+#skills {
+    padding: 60px;
+}
+
+#skills .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-content {
+    text-align: center;
+    width: 500px;
+}
+
+.skills-content h2 {
+    margin-bottom: 10px;
+}
+
+.skills-card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: 
+    var(--gradient-secondary-bg) padding-box,
+    var(--gradient-main) border-box;
+    text-align: center;
+}
+
+.card h3 {
+    padding: 8px;
+    font-weight: 500;
+}
+
+.card-icon {
+    color: var(--card-logo-color);
+    font-size: 50px;
+}
