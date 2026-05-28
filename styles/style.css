@@ -276,6 +276,10 @@ h2 {
     flex: 1;
 }
 
+.about-content p{
+    color: var(--secondary-text);
+}
+
 .about-section-img {
     height: 500px;
     overflow: hidden;
@@ -322,6 +326,11 @@ h2 {
 .skills-content {
     text-align: center;
     width: 500px;
+    margin-bottom: 15px;
+}
+
+.skills-content p {
+    color: var(--secondary-text);
 }
 
 .skills-content h2 {
@@ -354,6 +363,10 @@ h2 {
     font-weight: 500;
 }
 
+.card p {
+    color: var(--secondary-text);
+}
+
 .card-icon {
     color: var(--card-logo-color);
     font-size: 50px;
@@ -372,10 +385,15 @@ h2 {
 .services-content {
     text-align: center;
     width: 500px;
+    margin-bottom: 15px;
 }
 
 .services-content h2 {
     margin-bottom: 10px;
+}
+
+.services-content p {
+    color: var(--secondary-text);
 }
 
 .services-card-content {
@@ -404,8 +422,116 @@ h2 {
     font-weight: 500;
 }
 
+.services-card p {
+    color: var(--secondary-text);
+}
+
 .services-card-icon {
     color: var(--card-logo-color);
     font-size: 50px;
     display: block;
+}
+
+#projects {
+    padding: 60px;
+}
+
+#projects .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-header {
+    text-align: center;
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.projects-header p {
+    color: var(--secondary-text);
+}
+
+.carousel-wrapper {
+    display: flex;
+}
+
+.projects-previews {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+}
+
+.carousel-btn {
+    height: 40px;
+    color: var(--card-logo-color);
+    background: var(--bg-secondary-start);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.projects-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 1000px;
+}
+
+.project-card {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background:
+    linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    var(--gradient-main) border-box;
+    text-align: left;
+}
+
+.project-card h3 {
+    padding-bottom: 10px;
+    padding-top: 6px;
+    font-weight: 500;
+}
+
+.project-card p {
+    color: var(--secondary-text);
+    margin-bottom: 14px;
+}
+
+.tech-tag {
+    background-color: #132445;
+    border: none;
+    padding: 8px 14px;
+    color: var(--card-logo-color);
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.project-btn {
+    display: flex;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.project-btn a {
+    text-decoration: none;
+}
+
+.btn-github {
+    padding: 10px 24px;
+    background: var(--gradient-main);
+    color: var(--primary-text);
+    border-radius: 30px;
+}
+
+.btn-live {
+    padding: 10px 24px;
+    background: var(--card-logo-color);
+    color: var(--primary-text);
+    border-radius: 30px;
 }
