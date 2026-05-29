@@ -462,12 +462,18 @@ h2 {
 }
 
 .carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
     height: 40px;
-    color: var(--card-logo-color);
-    background: var(--bg-secondary-start);
+    color: var(--primary-text);
+    background: var(--gradient-main);
     border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .projects-carousel {
@@ -489,6 +495,7 @@ h2 {
     linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
     var(--gradient-main) border-box;
     text-align: left;
+    transition: opacity 0.3s ease;
 }
 
 .project-card h3 {
@@ -500,6 +507,10 @@ h2 {
 .project-card p {
     color: var(--secondary-text);
     margin-bottom: 14px;
+}
+
+.project-card.active {
+    display: block;
 }
 
 .tech-tag {
@@ -716,4 +727,13 @@ form button {
     margin-top: 20px;
     margin-bottom: 20px;
     color: var(--secondary-text);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease;
 }
