@@ -657,3 +657,63 @@ form button {
     border-radius: 30px;
     border: none;
 }
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    font-weight: bold;
+    font-size: 18px;
+    background: var(--gradient-main);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-size: 12px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-text);
+    background: var(--card-logo-color);
+    padding: 10px;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.footer-divider {
+    border: none;
+    height: 1px;
+    background: var(--gradient-border-bottom);
+    margin: 0 48px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--secondary-text);
+}
