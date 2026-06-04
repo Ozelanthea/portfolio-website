@@ -453,6 +453,8 @@ h2 {
 
 .carousel-wrapper {
     display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .projects-previews {
@@ -474,6 +476,16 @@ h2 {
     border-radius: 50%;
     font-size: 18px;
     cursor: pointer;
+
+    
+}
+
+.prev {
+    margin-left: 40px;
+}
+
+.next {
+    margin-right: 40px;
 }
 
 .projects-carousel {
@@ -481,6 +493,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     max-width: 1000px;
+    flex: 1;
 }
 
 .project-card {
@@ -736,4 +749,161 @@ form button {
 
 .fade-in {
     animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hire-btn {
+        width: 150px;
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    #about {
+        padding: 30px 20px;
+    }
+
+    #about .container {
+        flex-direction: column;
+    }
+
+    .about-section-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-section-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    #skills .container,
+    #services .container,
+    #projects .container,
+    #contact .container {
+        padding: 30px 20px;
+    }
+
+    .skills-card-content,
+    .services-card-content {
+        grid-template-columns: 1fr;
+    }
+
+    #projects {
+        padding: 40px 0;
+    }
+
+    .projects-header {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .carousel-wrapper {
+        width: 100%;
+        gap: 10px;
+        padding: 0 4px;
+    }
+
+    .projects-carousel {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .project-card {
+        margin-top: 10px;
+        padding: 16px;
+    }
+
+    .project-card .tech-tag {
+        margin-bottom: 10px;
+    }
+
+    .project-btn {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+
+    }
+
+    .btn-github,
+    .btn-live {
+        padding: 8px 18px;
+        font-size: 14px;
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .contact-body {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer {
+        padding: 10px 5px;
+    }
+
+    .footer-nav ul {
+        gap: 10px;
+    }
+
+    .footer-nav ul a {
+        font-size: 12px;
+    }
+
+    .footer-top {
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .socials {
+        padding: 8px;
+        width: 25px;
+        height: 25px;
+    }
 }

@@ -3,9 +3,12 @@ const nextButton = document.querySelector(".next");
 const previousButton = document.querySelector(".prev");
 
 let currentIndex = 0;
+function getCardsToShow() {
+    return window.innerWidth <= 768 ? 1 : 2;
+}
 
 projectCards.forEach((card, index) => {
-        if(index >= currentIndex && index < currentIndex + 2 ) {
+        if(index >= currentIndex && index < currentIndex + getCardsToShow() ) {
             card.style.display = "block";
             card.classList.add("fade-in")
         } else {
@@ -15,14 +18,15 @@ projectCards.forEach((card, index) => {
 })
 
 nextButton.addEventListener("click", (event) => {
-    if(currentIndex + 2 >= projectCards.length) {
+    const cardsToShow = getCardsToShow();
+    if(currentIndex + cardsToShow >= projectCards.length) {
         return;
     }
 
-    currentIndex +=2;
+    currentIndex += cardsToShow;
 
     projectCards.forEach((card, index) => {
-        if(index >= currentIndex && index < currentIndex + 2 ) {
+        if(index >= currentIndex && index < currentIndex + cardsToShow ) {
             card.style.display = "block";
             card.classList.add("fade-in")
         } else {
@@ -34,14 +38,15 @@ nextButton.addEventListener("click", (event) => {
 })
 
 previousButton.addEventListener("click", (event) => {
+    const cardsToShow = getCardsToShow();
     if(currentIndex === 0) {
         return;
     }
 
-    currentIndex -=2;
+    currentIndex -= cardsToShow;
 
     projectCards.forEach((card, index) => {
-        if(index >= currentIndex && index < currentIndex + 2 ) {
+        if(index >= currentIndex && index < currentIndex + cardsToShow ) {
             card.style.display = "block";
             card.classList.add("fade-in")
         } else {
