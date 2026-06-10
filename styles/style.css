@@ -817,7 +817,10 @@ form button {
     }
 
     .hero-buttons {
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .hero-image {
