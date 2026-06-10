@@ -756,23 +756,54 @@ form button {
         overflow-x: hidden;
     }
 
-    nav {
-        padding: 10px 20px;
+    /* NAVBAR */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--primary-text);
+        border-radius: 3px;
+        transition: all 0.3s ease;
     }
 
     .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--gradient-secondary-bg);
+        padding: 20px;
         gap: 16px;
+        z-index: 1000;
     }
 
-    .nav-links a {
-        font-size: 12px;
+    .nav-links.open{
+        display: flex;
     }
 
     .hire-btn {
-        width: 150px;
-        padding: 8px 12px;
-        font-size: 12px;
-        margin-left: 20px;
+        display: none;
+    }
+
+    #navbar .container {
+        flex-wrap: wrap;
+        padding: 8px 16px;
+    }
+
+    /* HERO */
+
+    .hero {
+        padding: 30px 20px 100px;
     }
 
     .hero .container {
@@ -797,12 +828,15 @@ form button {
         margin-bottom: 30px;
     }
 
+    /* ABOUT */
+
     #about {
         padding: 30px 20px;
     }
 
     #about .container {
         flex-direction: column;
+        gap: 30px;
     }
 
     .about-section-img {
@@ -815,17 +849,33 @@ form button {
         height: auto;
     }
 
-    #skills .container,
-    #services .container,
-    #projects .container,
-    #contact .container {
-        padding: 30px 20px;
+    /* SKILLS */
+    #skills{
+        padding: 40px 20px;
     }
 
-    .skills-card-content,
+    .skills-content {
+        width: 100%;
+    }
+
+    .skills-card-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* SERVICES */
+    #services {
+        padding: 40px 20px;
+    }
+
+    .services-content {
+        width: 100%;
+    }
+
     .services-card-content {
         grid-template-columns: 1fr;
     }
+
+    /* PROJECTS */
 
     #projects {
         padding: 40px 0;
@@ -873,30 +923,62 @@ form button {
         min-width: 120px;
     }
 
+    .prev { margin-left: 4px; }
+    .next { margin-right: 4px; }
+
+    /* CONTACT */
+    #contact {
+        padding: 40px 20px;
+    }
+
+    .contact-header {
+        width: 100%;
+    }
+
     .contact-body {
         flex-direction: column;
         gap: 30px;
+        width: 100%;
+    }
+
+    .contact-info p {
+        max-width: 100%;
+    }
+
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .info input {
+        width: 100%;
     }
 
     footer {
         padding: 10px 5px;
     }
 
-    .footer-nav ul {
-        gap: 10px;
-    }
-
-    .footer-nav ul a {
-        font-size: 12px;
-    }
-
     .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
         padding: 20px;
         margin-top: 10px;
     }
 
+    .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
     .footer-socials {
-        display: flex;
         gap: 12px;
         margin-top: 10px;
     }
